@@ -14,7 +14,7 @@
           <b-form-group label="Password">
             <b-form-input v-model="password" type="password" />
           </b-form-group>
-          <b-btn type="submit">Submit</b-btn>
+          <b-btn type="submit" :disabled="busy">Submit</b-btn>
         </b-form>
       </b-col>
     </b-row>
@@ -30,6 +30,16 @@ export default {
       email: "",
       password: "",
     };
+  },
+  computed: {
+    busy: {
+      get() {
+        return this.$store.state.busy;
+      },
+      set(busy) {
+        this.$store.commit("setBusy", busy)
+      }
+    }
   },
   methods: {
     register() {
