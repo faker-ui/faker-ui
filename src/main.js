@@ -3,8 +3,22 @@ import './plugins/bootstrap-vue'
 import App from './App.vue'
 import router from './router'
 import store from './store'
+import { initializeApp } from 'firebase/app';
 
-Vue.config.productionTip = false
+Vue.config.productionTip = false;
+
+const firebaseConfig = {
+  apiKey: "AIzaSyCeGL5aLhVGgPVhStkPcxESr1FNtBokogI",
+  authDomain: "faker-ui.firebaseapp.com",
+  projectId: "faker-ui",
+  storageBucket: "faker-ui.appspot.com",
+  messagingSenderId: "311647644697",
+  appId: "1:311647644697:web:098f95f5d233496cdcce88",
+  measurementId: "G-TEQFB5RHJS"
+};
+
+
+initializeApp(firebaseConfig);
 
 new Vue({
   router,
