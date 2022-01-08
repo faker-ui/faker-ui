@@ -3,6 +3,8 @@
     <b-navbar-brand>Faker UI</b-navbar-brand>
     <b-navbar-nav>
       <b-nav-item :to="{ name: 'Dashboard' }">Dashboard</b-nav-item>
+      <b-nav-item :to="{ name: 'Generate' }">Generate</b-nav-item>
+      <b-nav-item :to="{ name: 'Compounds' }">Compounds</b-nav-item>
     </b-navbar-nav>
     <b-navbar-nav class="ml-auto">
       <b-nav-item :to="{ name: 'Settings' }">Settings</b-nav-item>
