@@ -13,6 +13,22 @@ const routes = [
     component: () => import(/* webpackChunkName: "dashboard" */ '../views/Dashboard.vue')
   },
   {
+    path: '/compounds',
+    name: 'Compounds',
+    // route level code-splitting
+    // this generates a separate chunk (compounds.[hash].js) for this route
+    // which is lazy-loaded when the route is visited.
+    component: () => import(/* webpackChunkName: "compounds" */ '../views/Compounds.vue')
+  },
+  {
+    path: '/generate',
+    name: 'Generate',
+    // route level code-splitting
+    // this generates a separate chunk (generate.[hash].js) for this route
+    // which is lazy-loaded when the route is visited.
+    component: () => import(/* webpackChunkName: "generate" */ '../views/Generate.vue')
+  },
+  {
     path: '/settings',
     name: 'Settings',
     // route level code-splitting
